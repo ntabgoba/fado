@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'fahanda/style.css' %}" />
+<html>
+<header>
+</header>
+<body>
+{% if list_products %}
+<ul>
+	{% for product in  list_products %}
+	<h1>{{ product.name }} </h1>
+	<p>{{ product.description }}</p>
+	{% endfor %}
+</ul>
+{% else %}
+	<p> There are no products available.</p>
+{% endif %}
+</body>
+</html>
